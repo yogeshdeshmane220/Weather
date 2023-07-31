@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-black"
+        android:text="10 oct 2022"
+        android:textColor="@color/white"
+        android:textSize="35sp" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/cloud"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/date"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="-28dp"
+        android:visibility="visible"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/sun3" />
+
+    <TextView
+        android:id="@+id/cityname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_marginStart="25dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Unchegaon"
+        android:textColor="@color/white"
+        android:textSize="35sp" />
+
+    <EditText
+        android:id="@+id/searchbar"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/cloud"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/cloud_back"
+        android:paddingStart="15dp" />
+
+    <ImageView
+
+        android:id="@+id/searchIcon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/cloud"
+        android:layout_toRightOf="@id/searchbar"
+        android:src="@drawable/search" />
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchbar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="15dp"
+        android:fontFamily="sans-serif-black"
+        android:text="45 ℃"
+        android:textColor="@color/white"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/haze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/temperature"
+  android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-black"
+        android:text="Haze"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/haze"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/pressurell"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/haze"
+            android:layout_marginEnd="20dp"
+
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/cloud_back"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvpressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/haze"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Pressure"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvpressure"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:text="280Db"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/humidityll"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/haze"
+            android:background="@drawable/cloud_back"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvHumidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/haze"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Pressure"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvpressure"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-black"
+                android:text="280Db"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/ll2"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="537dp"
+        android:layout_marginBottom="43dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/maxtempll"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/haze"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/cloud_back"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvmaxtemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/haze"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Max-Temp"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/maxtemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvpressure"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center_horizontal"
+                android:text="280Db"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mintempll"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/haze"
+            android:background="@drawable/cloud_back"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvmintemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/haze"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Min Temp"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/mintemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvpressure"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-black"
+                android:text="280"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
